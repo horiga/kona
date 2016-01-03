@@ -56,9 +56,6 @@ local.properties
 # TeXlipse plugin
 .texlipse
 
-# ------------------------------
-# LINEGAME local
-# ------------------------------
 .classpath
 .project
 .springBeans
