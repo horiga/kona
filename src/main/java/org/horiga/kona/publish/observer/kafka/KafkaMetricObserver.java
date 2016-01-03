@@ -22,7 +22,7 @@ public class KafkaMetricObserver<T> extends BaseMetricObserver {
 							   String topic, KeyedMessageEncoder<T> encoder) {
 		super(metricsName);
 		Objects.requireNonNull(producerProperties, "Kafka producer properties must be not Null");
-		this.producer = new Producer<>(new ProducerConfig(producerProperties));
+		this.producer = new Producer<String, T>(new ProducerConfig(producerProperties));
 		Runtime.getRuntime().addShutdownHook(new Thread() {
 			public void run() {
 				try {
